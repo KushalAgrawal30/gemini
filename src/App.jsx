@@ -1,12 +1,15 @@
 import React from "react";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Main from "./components/Main/Main";
+import Gemini from "./gemini.jsx";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./homepage";
 
 const App = () => {
   return(
     <>
-    <Sidebar/>
-    <Main/>
+    <Routes>
+      <Route path='/gemini' element={<Gemini/>}/>
+      <Route path="/" element={<HomePage/>}/>
+    </Routes>
     </>
   )
 }
