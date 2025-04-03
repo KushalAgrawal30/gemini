@@ -2,23 +2,42 @@ import React, { useContext } from "react";
 import './Main.css'
 import { assets } from "../../assets/assets";
 import { Context } from "../../Context/Context";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom";
+
+
 
 const Main = () => {
+    
+    const navigate = useNavigate()
 
+    const user = JSON.parse(localStorage.getItem("user"))
     const {onSent, recentPrompt, showResult, loading, resultData, setInput, input} = useContext(Context)
+
+    const userName = user.name?.split(" ",2).join(" ")
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        navigate("/");
+    }
 
     return(
         <div className="main">
             <div className="nav">
                 <p>Gemini</p>
-                <img src={assets.user_icon} alt="" />
+                <div className="right">
+                    <button onClick={handleLogout} className="logout"><FontAwesomeIcon icon={faRightFromBracket}/></button>
+                    <img src={user?.picture} alt=""/>
+                </div>
             </div>
 
             <div className="main-container">
                 {!showResult
                 ?<>
                     <div className="greet">
-                        <p><span>Hello, Kushal.</span></p>
+                        <p><span>Hello, {userName}.</span></p>
                         <p>How can I help you today?</p>
                     </div>
                     <div className="cards">
@@ -43,7 +62,7 @@ const Main = () => {
                 :<>
                 <div className="result">
                     <div className="result-title">
-                        <img src={assets.user_icon} alt="" />
+                        <img src={user?.picture} alt="" />
                         <p>{recentPrompt}</p>
                     </div>
                     <div className="result-data">

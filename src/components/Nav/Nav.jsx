@@ -2,7 +2,7 @@ import React from 'react'
 import './Nav.css'
 import { assets } from '../../assets/assets'
 
-const NavBar = () =>{
+const NavBar = ({login}) =>{
     return(
         <div className='navbar'>
             <div className='left'>
@@ -10,7 +10,7 @@ const NavBar = () =>{
                 <p className='gemini-title'>Gemini</p>
             </div>
             <div className='right'>
-                <button className='try-gemini'>Try Gemini</button>
+                <button onClick={login} className='try-gemini'>Try Gemini</button>
             </div>
         </div>
     )

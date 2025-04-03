@@ -73,3 +73,26 @@
     }
 }
 
+@media (max-width:910px){
+    .overview .gemini-text{
+        font-size: 85px;
+    }
+}
+
+@media (max-width:710px){
+    .overview{
+        margin-top: 10vh;
+    }
+    .overview .gemini-text{
+        font-size: 70px;
+    }
+}
+
+@media (max-width:380px){
+    .overview{
+        margin-top: 15vh;
+    }
+    .overview .gemini-text{
+        font-size: 50px;
+    }
+}
