@@ -14,6 +14,11 @@
     margin-bottom: 36px;
     width: 130px;
     height: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    pointer-events: none;
     animation: topup 1s ease-out forwards;
 }
 
@@ -90,7 +95,7 @@
 
 @media (max-width:380px){
     .overview{
-        margin-top: 15vh;
+        margin-top: 10vh;
     }
     .overview .gemini-text{
         font-size: 50px;

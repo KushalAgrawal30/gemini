@@ -9,16 +9,18 @@
     font-family: Arial, sans-serif;
     width: 100%;
     position: fixed;
+    z-index: 10;
     height: 10vh;
 }
 .navbar .left{
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 6px;
 }
 
 .navbar .left img{
-    height: 55px;
+    height: 40px;
 }
 
 .navbar .left .gemini-title{
