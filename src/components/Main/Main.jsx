@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
 
-
-
 const Main = () => {
     
     const navigate = useNavigate()
@@ -16,7 +14,7 @@ const Main = () => {
     const {onSent, recentPrompt, showResult, loading, resultData, setInput, input} = useContext(Context)
 
     const userName = user.name?.split(" ",2).join(" ")
-
+    console.log(user)
     const handleLogout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
@@ -29,7 +27,7 @@ const Main = () => {
                 <p>Gemini</p>
                 <div className="right">
                     <button onClick={handleLogout} className="logout"><FontAwesomeIcon icon={faRightFromBracket}/></button>
-                    <img src={user?.picture} alt=""/>
+                    <img src={user.picture} referrerPolicy="no-referrer" alt=""/>
                 </div>
             </div>
 
@@ -62,7 +60,7 @@ const Main = () => {
                 :<>
                 <div className="result">
                     <div className="result-title">
-                        <img src={user?.picture} alt="" />
+                        <img src={user?.picture} referrerPolicy="no-referrer" alt="" />
                         <p>{recentPrompt}</p>
                     </div>
                     <div className="result-data">

@@ -3,8 +3,7 @@ import NavBar from "./components/Nav/Nav";
 import Overview from "./components/Overview/Overview";
 import {useGoogleLogin} from '@react-oauth/google'
 import { useNavigate } from "react-router-dom";
-
-
+import Features from "./components/features/feature";
 
 const HomePage = () => {
 
@@ -36,6 +35,7 @@ const HomePage = () => {
         <>
         <NavBar login={login}/>
         <Overview login={login}/>
+        <Features/>
         </>
     )
 }

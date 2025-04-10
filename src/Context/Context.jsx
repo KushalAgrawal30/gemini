@@ -1,9 +1,7 @@
 import { createContext, useState } from "react";
 import run from "../config/gemini";
 
-
 export const Context = createContext()
-
 const ContextProvider = (props) => {
 
     const [input, setInput] = useState("")
