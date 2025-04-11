@@ -5,6 +5,7 @@ import {useGoogleLogin} from '@react-oauth/google'
 import { useNavigate } from "react-router-dom";
 import Features from "./components/features/feature";
 import './homepage.css'
+import Plans from "./components/plans/plans";
 
 
 const HomePage = () => {
@@ -38,6 +39,7 @@ const HomePage = () => {
         <NavBar login={login}/>
         <Overview login={login}/>
         <Features/>
+        <Plans/>
         </>
     )
 }

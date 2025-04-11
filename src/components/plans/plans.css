@@ -1,0 +1,152 @@
+.plans {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.plans .spacing {
+    margin: 20px;
+}
+
+.plans .plan-head {
+    margin: 10px;
+}
+
+.plans .plan-head h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -3px;
+}
+
+.plans .price-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    max-width: 1100px;
+}
+
+.plans .price-cards .card {
+    margin: 10px 10px;
+    padding: 30px;
+    border: 0.5px solid #d9d9d9;
+    border-radius: 25px;
+    max-width: 700px;
+}
+
+.plans .price-cards .card .logo {
+    margin-bottom: 40px;
+}
+
+.price-cards .card h2 {
+    font-size: 50px;
+    font-weight: 450;
+}
+
+.price-cards .card .content {
+    margin: 15px 0;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #757575;
+}
+
+
+.plans .price-cards .card .logo img {
+    border: 0.5px solid #e7e7e7;
+    border-radius: 50%;
+    padding: 15px;
+    display: block;
+}
+
+.price-cards .card .price {
+    font-size: 20px;
+    color: #757575;
+    margin: 30px 0;
+}
+
+.price-cards .card .price span {
+    font-size: 48px;
+    font-weight: 500;
+    color: black;
+}
+
+.price-cards .card .price sup {
+    font-size: 25px;
+}
+
+.price-cards .card button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 0.5px solid #cccccc;
+    background: none;
+    color: inherit;
+    margin-bottom: 50px;
+}
+
+.price-cards .card .advance-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background: linear-gradient(to right, #af85e5, #ea5166);
+    color: white;
+    transition: background 1s ease;
+}
+
+.price-cards .card .advance-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ea5166;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.price-cards .card .advance-btn:hover::after {
+    opacity: 1;
+}
+
+
+.price-cards .card .advance-price span {
+    background: linear-gradient(to right, #af85e5, #ea5166);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price-cards .card .card-detail-list {
+    margin-top: 30px;
+}
+
+.price-cards .card-detail-list ul {
+    list-style: none;
+}
+
+.price-cards .card-detail-list ul li {
+    display: flex;
+    border-top: 1px solid #d9d9d9;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 380;
+}
+
+.price-cards .card-detail-list ul li svg {
+    margin: 10px;
+    width: 53px;
+}
+
+@media (max-width: 1100px) {
+    .plans .price-cards {
+        flex-direction: column;
+    }
+}
