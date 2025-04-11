@@ -4,6 +4,8 @@ import Overview from "./components/Overview/Overview";
 import {useGoogleLogin} from '@react-oauth/google'
 import { useNavigate } from "react-router-dom";
 import Features from "./components/features/feature";
+import './homepage.css'
+
 
 const HomePage = () => {
 
