@@ -50,9 +50,8 @@
     opacity: 0.8;
 }
 
-@media (max-width:430px){
+@media (max-width:625px){
     .right .try-gemini{
-        font-size: 15px;
-        padding: 8px 25px;
+        display: none;
     }
 }
