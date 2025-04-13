@@ -38,24 +38,6 @@ const Main = () => {
                         <p><span>Hello, {userName}.</span></p>
                         <p>How can I help you today?</p>
                     </div>
-                    <div className="cards">
-                        <div className="card">
-                            <p>Suggest Beautiful places to see on an upcoming road trip</p>
-                            <img src={assets.compass_icon} alt="" />
-                        </div>
-                        <div className="card">
-                            <p>Briefly summarize this concept ai</p>
-                            <img src={assets.bulb_icon} alt="" />
-                        </div>
-                        <div className="card">
-                            <p>Brainstorm team bonding activity for our work retreat</p>
-                            <img src={assets.message_icon} alt="" />
-                        </div>
-                        <div className="card">
-                            <p>Improve the readibilty of the following code</p>
-                            <img src={assets.code_icon} alt="" />
-                        </div>
-                    </div>
                 </>
                 :<>
                 <div className="result">

@@ -8,6 +8,7 @@ import './homepage.css'
 import Plans from "./components/plans/plans";
 import Student from "./components/student/student";
 import Insta from "./components/instagram/insta";
+import Upgrade from "./components/upgrade/upgrade";
 
 
 const HomePage = () => {
@@ -44,6 +45,7 @@ const HomePage = () => {
         <Plans/>
         <Student/>
         <Insta/>
+        <Upgrade/>
         </>
     )
 }

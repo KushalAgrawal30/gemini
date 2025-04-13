@@ -1,0 +1,109 @@
+.upgrade{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+.upgrade .headline{
+    font-size: 33px;
+    margin: 20px 0;
+}
+
+.upgrade .headline h2{
+    font-weight: 470;
+    letter-spacing: -1px;
+}
+
+.upgrade .layout{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    gap: 20px;
+    margin: 23px 0;
+}
+
+.layout .upgrade-card{
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #cccccc;
+    border-radius: 35px;
+}
+
+
+.upgrade .layout .upgrade-card img{
+    margin-right: 20px;
+}
+
+.upgrade .layout .upgrade-card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+}
+
+
+.upgrade .layout .upgrade-card .content h3{
+    font-size: 21px;
+    font-weight: 320;
+}
+
+.upgrade .layout .upgrade-card .content p{
+    font-size: 20.5px;
+    font-weight: 350;
+    color: #757575;
+}
+
+.upgrade .spacer{
+    margin: 30px;
+}
+
+@media(max-width:1000px){
+    .upgrade .headline{
+        font-size: 21px;
+    }
+
+    .upgrade .layout{
+        grid-template-columns: repeat(1,1fr);
+        width: 500px;
+    }
+
+    .upgrade .layout .upgrade-card .content h3{
+        font-size: 19px;
+    }
+
+    .upgrade .layout .upgrade-card .content p{
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width: 540px){
+    .upgrade .headline{
+        font-size: 19px;
+    }
+
+    .upgrade .layout{
+        grid-template-columns: repeat(1,1fr);
+        width: 90%;
+    }
+
+    .upgrade .layout .upgrade-card{
+        padding: 30px;
+    }
+
+    .upgrade .layout .upgrade-card .content h3{
+        font-size: 17px;
+    }
+
+    .upgrade .layout .upgrade-card .content p{
+        font-size: 16px;
+    }
+
+}
