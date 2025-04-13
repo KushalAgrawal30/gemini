@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Features from "./components/features/feature";
 import './homepage.css'
 import Plans from "./components/plans/plans";
+import Student from "./components/student/student";
 
 
 const HomePage = () => {
@@ -40,6 +41,7 @@ const HomePage = () => {
         <Overview login={login}/>
         <Features/>
         <Plans/>
+        <Student/>
         </>
     )
 }

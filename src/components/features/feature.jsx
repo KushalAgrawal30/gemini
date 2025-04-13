@@ -58,11 +58,41 @@ function Features(){
 
         <div className="feature">
             <div className="feature-about">
+                <h2>Get help with tasks in multiple apps at once</h2>
+                <p>Gemini connects to your stuff in Gmail, Google Calendar, Google Maps, YouTube and Google Photos to help you find what you need without switching between apps. You can use Gemini to set alarms, control music and make calls hands-free.</p>
+            </div>
+            <div className="video">
+                <video src="https://storage.googleapis.com/gweb-gemini-cdn/gemini/uploads/a67e69028b547c044c242974242456ab313ea43c.mp4" muted autoPlay disableRemotePlayback playsInline loop></video>
+            </div>
+        </div>
+
+        <div className="feature">
+            <div className="feature-about">
                 <h2>Condense hours of searching with Deep Research</h2>
                 <p>Sift through hundreds of websites, analyse the information and create a comprehensive report in minutes. It's like having a personalised research agent that helps you get up to speed on just about anything.</p>
             </div>
             <div className="video">
                 <video src="https://storage.googleapis.com/gweb-gemini-cdn/gemini/uploads/ebe2b92245b8d10623d763acba8278b183b5380c.mp4" muted autoPlay disableRemotePlayback playsInline loop></video>
+            </div>
+        </div>
+
+        <div className="feature">
+            <div className="feature-about">
+                <h2>Build custom experts with Gems</h2>
+                <p>Save highly detailed instructions and upload files to brief your own AI expert. Gems can be anything from a career coach or brainstorm partner to a coding helper.</p>
+            </div>
+            <div className="video">
+                <video src="https://storage.googleapis.com/gweb-gemini-cdn/gemini/uploads/2c884b7b69715f877adc31903b93929531310a7f.mp4" muted autoPlay disableRemotePlayback playsInline loop></video>
+            </div>
+        </div>
+
+        <div className="feature">
+            <div className="feature-about">
+                <h2>Dive into large files and code repositories</h2>
+                <p>With a long context window of 1 million tokens, Gemini Advanced can understand and analyse whole books, lengthy reports and more with uploads of up to 1,500 pages or 30K lines of code, all at once.</p>
+            </div>
+            <div className="video">
+                <video src="https://storage.googleapis.com/gweb-gemini-cdn/gemini/uploads/d371f91ad8ba3d9d96a3cd29beba24467efaf94a.mp4" muted autoPlay disableRemotePlayback playsInline loop></video>
             </div>
         </div>
 
