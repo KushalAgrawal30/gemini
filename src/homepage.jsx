@@ -9,6 +9,7 @@ import Plans from "./components/plans/plans";
 import Student from "./components/student/student";
 import Insta from "./components/instagram/insta";
 import Upgrade from "./components/upgrade/upgrade";
+import Footer from "./components/footer/footer";
 
 
 const HomePage = () => {
@@ -46,6 +47,7 @@ const HomePage = () => {
         <Student/>
         <Insta/>
         <Upgrade/>
+        <Footer/>
         </>
     )
 }

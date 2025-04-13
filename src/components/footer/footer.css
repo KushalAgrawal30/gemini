@@ -1,0 +1,66 @@
+.footer{
+    width: 96%;
+    margin: 20px auto;
+    border-top: 1px solid #e5e5e5;
+    font-family: "Open Sans", sans-serif;
+    padding: 35px 0;
+}
+
+.footer .gemini-logo img{
+    width: 40px;
+    height: auto;
+}
+
+.footer .layout{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer .layout .gemini-feature{
+    grid-column: 4/span 3;
+}
+
+.footer .layout .about{
+    grid-column: 7/span 3;
+}
+
+.footer .layout .media{
+    grid-column: 10/span 2;
+}
+
+.footer .layout .card{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .layout .card .headline{
+    font-size: 14px;
+    color: #757575;
+}
+
+.footer .layout .card .headline h2{
+    font-weight: 300;
+}
+
+.footer .layout .card ul{
+    list-style-type: none;
+}
+
+.footer .layout .card ul li{
+    margin: 14px 0;
+    font-size: 21px;
+    font-weight: 350;
+}
+
+@media(max-width:900px){
+    .footer .layout{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .layout .card{
+        margin: 20px 0;
+    }
+}
