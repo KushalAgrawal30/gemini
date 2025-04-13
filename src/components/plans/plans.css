@@ -149,4 +149,21 @@
     .plans .price-cards {
         flex-direction: column;
     }
+
+    .plans .plan-head h2 {
+        font-size: 37px;
+    }
+       
 }
+
+@media (max-width: 600px) {
+    .plans .price-cards {
+        flex-direction: column;
+    }
+
+    .price-cards .card h2 {
+        font-size: 37px;
+    }
+       
+}
+

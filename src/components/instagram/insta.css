@@ -1,0 +1,107 @@
+.instagram{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.instagram .layout{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+}
+
+.instagram .headline{
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 30px;
+}
+
+.instagram .headline h2{
+    letter-spacing: -1px;
+    font-weight: 450;
+}
+
+.instagram .layout .card{
+    width: 100%;    
+    margin: 10px 0;
+}
+
+.instagram .layout .card img{
+    width: 95%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.instagram .layout .card p{
+    margin: 20px 0;
+    width: 88%;
+    font-weight: 350;
+    font-size: 20px;
+}
+
+.instagram button{
+    margin: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 24px;
+    border: 0.7px solid #cccccc;
+}
+
+@media(max-width:1260px){
+    .instagram .layout{
+        width: 100%;
+    }
+
+    .instagram .layout .card p{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:1000px){
+    .instagram{
+        margin-top: 0;
+    }
+
+    .instagram .layout{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+    }
+
+    .instagram .headline{
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .instagram .layout .card img{
+        width: 100%;
+    }
+
+    .instagram .layout .card p{
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media(max-width:600px){
+    .instagram .layout{
+        width: 90%;
+    }
+
+    
+    .instagram .headline{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .instagram .layout .card p{
+        font-size: 15px;
+    }
+}

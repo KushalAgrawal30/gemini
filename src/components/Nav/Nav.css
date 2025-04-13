@@ -70,4 +70,8 @@
     .right .try-gemini{
         display: none;
     }
+
+    .navbar .left .gemini-title{
+        font-size: 30px;
+    }
 }

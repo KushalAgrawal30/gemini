@@ -7,6 +7,7 @@ import Features from "./components/features/feature";
 import './homepage.css'
 import Plans from "./components/plans/plans";
 import Student from "./components/student/student";
+import Insta from "./components/instagram/insta";
 
 
 const HomePage = () => {
@@ -42,6 +43,7 @@ const HomePage = () => {
         <Features/>
         <Plans/>
         <Student/>
+        <Insta/>
         </>
     )
 }
