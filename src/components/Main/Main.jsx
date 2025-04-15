@@ -14,10 +14,9 @@ const Main = () => {
     const fileInputRef = useRef(null);
 
     const user = JSON.parse(localStorage.getItem("user"))
-    const {onSent, modelName, setModelName, allChats, recentPrompt, setSelectedImage, selectedImage, showResult, loading, resultData, setInput, input} = useContext(Context)
+    const {onSent, setAllChats, modelName, setModelName, allChats, recentPrompt, setSelectedImage, selectedImage, showResult, loading, resultData, setInput, input} = useContext(Context)
 
     const userName = user.name?.split(" ",2).join(" ")
-    
     
     useEffect(() => {
         bottomRef.current?.scrollIntoView({behavior:"smooth", block: "center" });
@@ -27,6 +26,8 @@ const Main = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         navigate("/");
+        setAllChats([])
+        window.location.reload();
     }
 
     const handleImageChange = (e) =>{
@@ -115,7 +116,7 @@ const Main = () => {
                     ))}
                     {loading?
                         <div ref={bottomRef} className="new-response loader">
-                            <img src={assets.gemini_icon} alt="" />
+                            <img src={assets.gemini_icon} alt="" /> 
                             <p>Just a second...</p>
                         </div>
                     :null}
@@ -150,3 +151,5 @@ const Main = () => {
 }
 
 export default Main
+
+

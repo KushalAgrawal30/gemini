@@ -32,6 +32,7 @@ const ContextProvider = (props) => {
         const model = genAI.getGenerativeModel({model: `${modelName[0]}`})
         console.log(model)
         setSelectedImage(null)
+        setInput("")
         try{
             if(base64Image){
                 const imagePart = {
@@ -130,6 +131,7 @@ const ContextProvider = (props) => {
         recentPrompt,
         setRecentPrompt,
         modelName,
+        setAllChats,
         setModelName,
         showResult,
         loading,
