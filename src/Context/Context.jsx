@@ -14,6 +14,7 @@ const ContextProvider = (props) => {
     const [allChats, setAllChats] = useState([])
     const [selectedImage, setSelectedImage] = useState(null)
     const [modelName, setModelName] = useState(["gemini-2.0-flash","2.0 Flash"])
+    const [message, setMessage] = useState([])
 
     const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
     const generationConfig = {
@@ -51,7 +52,7 @@ const ContextProvider = (props) => {
 
             const chat = model.startChat({
                 generationConfig,
-                history: [],
+                history: message,
             });
 
             const result = await chat.sendMessage(prompt);
@@ -78,16 +79,19 @@ const ContextProvider = (props) => {
         return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    const onSent = async (prompt) => {
+    const onSent = async () => {
         if(input==="" && selectedImage==null){
             return;
         }
         setResultData("")
         if(selectedImage){
             setAllChats(chats => [...chats, {userImage:selectedImage, align:"right"}])
+            setMessage(message => [...message, {role:'user', parts:[{inlineData:{mimeType:"image/jpeg",data:selectedImage.replace(/^data:image\/(png|jpe?g);base64,/, "")}}]}])
+
         }
         if(input!==""){
             setAllChats(chats => [...chats, {userPrompt:input, align:"right"}])
+            setMessage(message => [...message, {role:'user', parts:[{text:input}]}])
         }
         setLoading(true)
         setShowResult(true)
@@ -116,6 +120,7 @@ const ContextProvider = (props) => {
             delayPara(i,newResonseArray[i]+" ")
         }
         setAllChats(chats => [...chats, {aiResponse:newResponse, align:"left"}])
+        setMessage(message => [...message, {role:'model',parts:[{text:newResponse}]}])
         setLoading(false)
         setInput("")
     }

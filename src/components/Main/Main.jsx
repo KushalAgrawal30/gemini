@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef,  useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import './Main.css'
 import { assets } from "../../assets/assets";
 import { Context } from "../../Context/Context";
@@ -14,7 +14,7 @@ const Main = () => {
     const fileInputRef = useRef(null);
 
     const user = JSON.parse(localStorage.getItem("user"))
-    const {onSent, setAllChats, modelName, setModelName, allChats, recentPrompt, setSelectedImage, selectedImage, showResult, loading, resultData, setInput, input} = useContext(Context)
+    const {onSent, setAllChats, modelName, setModelName, allChats, setSelectedImage, selectedImage, showResult, loading, setInput, input} = useContext(Context)
 
     const userName = user.name?.split(" ",2).join(" ")
     
@@ -92,7 +92,7 @@ const Main = () => {
                 :<>
                 <div className="result">
                     {allChats.map((m,i) => (
-                    <div  className="result-box">
+                    <div key={i}  className="result-box">
                         <>
                         {m.align == "right" ? 
                             <div className="user-prompts">
