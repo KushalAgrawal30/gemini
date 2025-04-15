@@ -3,17 +3,26 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f0f4f8;
+    background-color: #282a2c;
     padding: 25px 15px;
 }
 
 .sidebar img{
     width: 20px;
 }
+
+.sidebar .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
  
 .sidebar .menu{
     display: block;
-    margin-left: 10px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    color: #c4c7c5;
     cursor: pointer;
 }
 
@@ -22,12 +31,19 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 15px;
-    background-color: #e6eaf1;
+    padding: 8px 13px;
+    background-color: #202123;
     border-radius: 50px;
-    font-size: 14px;
     color: gray;
     cursor: pointer;
+}
+
+.sidebar .new-chat button{
+    background: transparent;
+    border: none;
+    color: #757577;
+    font-size: 17.5px;
+
 }
 
 .sidebar .recent{

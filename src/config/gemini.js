@@ -22,7 +22,14 @@ import {
     responseMimeType: "text/plain",
   };
   
-  async function run(prompt) {
+  async function run(prompt,base64Image) {
+    const imagePart = {
+      inlineData: {
+        mimeType: "image/jpeg", 
+        data: base64Image.replace(/^data:image\/(jpeg|png);base64,/, "")
+      }
+    }
+
     const chatSession = model.startChat({
       generationConfig,
       history: [

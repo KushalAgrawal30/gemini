@@ -14,8 +14,10 @@ import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
 import gemini_icon from './gemini_icon.png'
 import gemini_logo from './gemini-color.svg'
+import send from './send.png'
 
 export const assets = {
+    send,
     gemini_logo,
     history_icon,
     menu_icon,

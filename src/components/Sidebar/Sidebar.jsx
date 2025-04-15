@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import './Sidebar.css'
 import {assets} from '../../assets/assets'
 import { Context } from "../../Context/Context";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars,faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 const Sidebar = () => {
@@ -18,9 +20,9 @@ const Sidebar = () => {
     return(
         <div className="sidebar">
             <div className="top">
-                <img src={assets.menu_icon} onClick={() => setExtented(prev => !prev)} className="menu" alt="" ></img>
+                <button onClick={() => setExtented(prev => !prev)} className="menu"><FontAwesomeIcon icon={faBars} /></button>
                 <div onClick={() => newChat()} className="new-chat">
-                    <img src={assets.plus_icon} alt="" />
+                    <button><FontAwesomeIcon icon={faPlus} /></button>
                     {extented?<p>New Chat</p>:null}
                 </div>
                 {extented?
