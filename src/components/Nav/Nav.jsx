@@ -16,4 +16,3 @@ const NavBar = ({login}) =>{
     )
 }
 
-export default NavBar
