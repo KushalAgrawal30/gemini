@@ -15,6 +15,8 @@ import Footer from "./components/footer/footer";
 const HomePage = () => {
 
     const navigate = useNavigate()
+    // this is a testing comment 
+    const test = 0;
 
     const login = useGoogleLogin({
         onSuccess: (tokenResponse) => {

@@ -1,8 +1,8 @@
 import React from 'react'
 import './Nav.css'
-import { assets } from '../../assets/assets'
 
 const NavBar = ({login}) =>{
+    if(true) return 0;
     return(
         <div className='navbar'>
             <div className='left'>
@@ -16,4 +16,3 @@ const NavBar = ({login}) =>{
     )
 }
 
-export default NavBar
